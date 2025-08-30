@@ -4,8 +4,8 @@
   "description": "MediaSoup-based multiparty conference application",
   "main": "server/server.js",
   "scripts": {
-    "start": "node server/server.js",
-    "dev": "nodemon server/server.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "client": "cd client && npm start",
     "build": "cd client && npm run build",
     "install-client": "cd client && npm install"

@@ -1,0 +1,27 @@
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    image: react-test
+    ports:
+      - "90:3000"
+    network_mode: host
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    image: mediasoup-test
+    ports:
+      - "4000:3001"
+    restart: always
+    network_mode: host
+  
+  nginx:
+    build: ./nginx
+    ports:
+      - "8080:8080"
+    depends_on:
+      - client
+      - server
+    network_mode: host
