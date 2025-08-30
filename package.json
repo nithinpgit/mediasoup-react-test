@@ -1,0 +1,31 @@
+{
+  "name": "mediasoup-conference",
+  "version": "1.0.0",
+  "description": "MediaSoup-based multiparty conference application",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2",
+    "mediasoup": "^3.12.16",
+    "cors": "^2.8.5",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "mediasoup",
+    "webrtc",
+    "conference",
+    "video-call"
+  ],
+  "author": "",
+  "license": "MIT"
+}

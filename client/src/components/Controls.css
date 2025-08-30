@@ -1,0 +1,138 @@
+.controls-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.controls-left,
+.controls-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.controls-right {
+  justify-content: flex-end;
+}
+
+.controls-center {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.participant-count {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.control-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  min-width: 80px;
+}
+
+.control-btn.enabled {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.control-btn.disabled {
+  background: rgba(255, 0, 0, 0.7);
+  color: white;
+}
+
+.control-btn.leave-btn {
+  background: rgba(220, 53, 69, 0.8);
+  color: white;
+}
+
+.control-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.control-btn.enabled:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.control-btn.disabled:hover {
+  background: rgba(255, 0, 0, 0.8);
+}
+
+.control-btn.leave-btn:hover {
+  background: rgba(220, 53, 69, 1);
+}
+
+.control-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.control-label {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .controls-container {
+    padding: 15px;
+  }
+  
+  .controls-center {
+    gap: 10px;
+  }
+  
+  .control-btn {
+    min-width: 60px;
+    padding: 10px 12px;
+  }
+  
+  .control-icon {
+    font-size: 18px;
+  }
+  
+  .control-label {
+    font-size: 10px;
+  }
+  
+  .participant-count {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .controls-left,
+  .controls-right {
+    display: none;
+  }
+  
+  .controls-container {
+    justify-content: center;
+  }
+}
